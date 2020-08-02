@@ -1,0 +1,193 @@
+#container {
+	position: relative;
+	font-family: monospace;
+	width: 620px;
+	height: 450px;
+	margin: 100px auto;
+	color: white;
+}
+#theme {
+	display: flex;
+	justify-content: space-evenly;
+	width: 450px;
+	margin-bottom: 20px;
+}
+#start,
+#reset,
+#useNumber,
+#useImage {
+	padding: 10px;
+	font-size: 28px;
+	background-color: #268043;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #94b195;
+	text-align: center;
+	cursor: pointer;
+}
+#start:hover,
+#reset:hover,
+#useNumber:hover,
+#useImage:hover {
+	color: #94b195;
+}
+#useNumber,
+#useImage {
+	width: 150px;
+}
+#start,
+#reset {
+	margin-top: 10px;
+}
+#game {
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	border-radius: 5px;
+	background-color: #94b195;
+	box-shadow: 0 0 10px #94b195;
+}
+#cover {
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	background-color: #268043;
+	z-index: 1;
+	font-size: 40px;
+	text-align: center;
+}
+#cover div {
+	color: #94b195;
+	line-height: 60px;
+	transform: translateY(150px);
+}
+#game div {
+	position: absolute;
+	width: 149px;
+	height: 149px;
+	box-shadow: 1px 1px 2px #777;
+	background-color: #268043;
+	text-align: center;
+	font-size: 150px;
+	line-height: 150px;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+#game div:hover {
+	color: #94b195;
+}
+#control {
+	width: 150px;
+	height: 450px;
+	float: right;
+}
+#control .timer {
+	font-size: 40px;
+	color: #222;
+	margin-top: 10px;
+}
+#clock {
+	width: 40px;
+}
+#d1 {
+	left: 0px;
+	background-size: cover;
+}
+#d2 {
+	left: 150px;
+	background-size: cover;
+}
+#d3 {
+	left: 300px;
+	background-size: cover;
+}
+#d4 {
+	top: 150px;
+	background-size: cover;
+}
+#d5 {
+	top: 150px;
+	left: 150px;
+	background-size: cover;
+}
+#d6 {
+	top: 150px;
+	left: 300px;
+	background-size: cover;
+}
+#d7 {
+	top: 300px;
+	background-size: cover;
+}
+#d8 {
+	left: 150px;
+	top: 300px;
+	background-size: cover;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	display: none;
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-image: url("./images/celebration.gif");
+	background-size: cover;
+	border-radius: 5px;
+	width: 800px;
+	height: 500px;
+}
+
+.popup #close {
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	right: 20px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: 600;
+	color: white;
+}
+.popup #close:hover {
+	color: red;
+	cursor: pointer;
+}
+.popup .content {
+	overflow: auto;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+	color: white;
+	animation: move-text-color 10s forwards;
+	opacity: 0;
+}
+
+@keyframes move-text-color {
+	0% {
+		bottom: -0.2em;
+		opacity: 1;
+		color: #3e5c76;
+	}
+
+	50% {
+		bottom: 0.2em;
+		color: #ec058e;
+	}
+
+	100% {
+		bottom: 0;
+		opacity: 1;
+		color: white;
+	}
+}

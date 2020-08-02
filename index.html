@@ -1,0 +1,47 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Puzzle</title>
+		<link rel="stylesheet" type="text/css" href="puzzle.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="theme">
+				<div id="useNumber" onclick="useNumber()">NUMBER</div>
+				<div id="useImage" onclick="useImage()">IMAGE</div>
+			</div>
+			<div id="game">
+				<div id="d1" onclick="move(1)">1</div>
+				<div id="d2" onclick="move(2)">2</div>
+				<div id="d3" onclick="move(3)">3</div>
+				<div id="d4" onclick="move(4)">4</div>
+				<div id="d5" onclick="move(5)">5</div>
+				<div id="d6" onclick="move(6)">6</div>
+				<div id="d7" onclick="move(7)">7</div>
+				<div id="d8" onclick="move(8)">8</div>
+			</div>
+			<div id="cover">
+				<div>CLICK START <br /> WHEN YOU ARE READY</div>
+			</div>
+			<div id="control">
+				<div class="timer">
+					<img id="clock" src='./images/time-icon.png' alt="time cost">
+					<span id="timer">0</span>s
+				</div>
+				<div id="start" onclick="start()">START</div>
+				<div id="reset" onclick="resetGame()">RESET</div>
+			</div>
+		</div>
+		<div id="overlay">
+			<div class="popup">
+				<div id="close">&times;</div>
+				<div class="content">
+					Congratulations!<br />
+					You made it!
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="puzzle.js"></script>
+	</body>
+</html>
