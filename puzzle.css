@@ -1,6 +1,6 @@
 #container {
 	position: relative;
-	font-family: monospace;
+	font-family: "Helvetica Neue", "Helvetica", sans-serif;
 	width: 620px;
 	height: 450px;
 	margin: 100px auto;
@@ -45,6 +45,13 @@
 	border-radius: 5px;
 	background-color: #94b195;
 	box-shadow: 0 0 10px #94b195;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 #cover {
 	position: absolute;
@@ -52,7 +59,7 @@
 	height: 450px;
 	background-color: #268043;
 	z-index: 1;
-	font-size: 40px;
+	font-size: 36px;
 	text-align: center;
 }
 #cover div {

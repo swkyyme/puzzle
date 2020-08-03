@@ -40,7 +40,6 @@ function resetGame() {
 	updateTimerDisplay();
 	document.getElementById("start").innerHTML = "START";
 	document.getElementById("cover").style.display = "block";
-
 	let position = game.divNumber.indexOf(0);
 	for (let i = 1; i < 50; i++) {
 		position = generateRandomDiv(position);
@@ -149,22 +148,26 @@ function updateTimerDisplay() {
 
 /**************theme******************************************/
 function useNumber() {
-	for (i = 1; i < 9; i++) {
+	for (let i = 1; i < 9; i++) {
 		const element = document.getElementById(`d${i}`);
 		element.style.backgroundImage = "url()";
 		element.style.color = "white";
-		element.addEventListener("mouseenter", () => {
-			element.style.color = "#94b195";
-		});
-		element.addEventListener("mouseleave", () => {
-			element.style.color = "white";
-		});
+		element.addEventListener("mouseenter", highlight);
+		element.addEventListener("mouseleave", removeHighlight);
 	}
 }
 function useImage() {
-	for (i = 1; i < 9; i++) {
-		const elementStyle = document.getElementById(`d${i}`).style;
-		elementStyle.backgroundImage = `url(./images/image_part_00${i}.jpg)`;
-		elementStyle.color = "transparent";
+	for (let i = 1; i < 9; i++) {
+		const element = document.getElementById(`d${i}`);
+		element.style.backgroundImage = `url(./images/image_part_00${i}.jpg)`;
+		element.style.color = "transparent";
+		element.removeEventListener("mouseenter", highlight);
+		element.removeEventListener("mouseleave", removeHighlight);
 	}
+}
+function highlight(e) {
+	e.target.style.color = "#94b195";
+}
+function removeHighlight(e) {
+	e.target.style.color = "white";
 }
